@@ -115,8 +115,8 @@
 
         </form>
 
-        </br><g:link controller='patientRegister' action='index'>Patient Register</g:link>
-        </br><g:link controller='doctorRegister' action='index'>Doctor Register</g:link>
+        </br><g:link controller='registration' action='index' params="[type: 'p']">Patient Register</g:link>
+        </br><g:link controller='registration' action='index' params="[type: 'd']">Doctor Register</g:link>
 
     </div>
 </div>

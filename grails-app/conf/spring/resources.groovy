@@ -15,7 +15,7 @@ beans = {
         redirectStrategy = ref('ohhAuthenticatedRedirectStrategy')
     }
 
-    ohhAuthenticatedRedirectStrategy(com.ohh.security.strategy.OhhAuthenticatedRedirectStrategy) {
+    ohhAuthenticatedRedirectStrategy(com.ohh.security.strategies.OhhAuthenticatedRedirectStrategy) {
         appConfig = grailsApplication
         springSecurityServiceBeanName = 'springSecurityService'
     }

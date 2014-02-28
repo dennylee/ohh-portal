@@ -1,4 +1,4 @@
-package com.ohh.security.strategy
+package com.ohh.security.strategies
 
 import com.ohh.Doctor
 import com.ohh.Patient

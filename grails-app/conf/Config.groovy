@@ -90,10 +90,8 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
-// registration service
-register.service.secret.key = 'keySecretServiceRegister'
-
 // Added by the Spring Security Core plugin:
+password.salt = 'kZQEZs04Wvyl343y61lpMhGCu328Lc2j'
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.ohh.security.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.ohh.security.UserRole'
@@ -105,9 +103,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/css/**':                       ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	    '/**/images/**':                    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	    '/**/favicon.ico':                  ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/register/**':                     ['permitAll'],
-        '/patientRegister/**':              ['permitAll'],
-        '/doctorRegister/**':               ['permitAll'],
+        '/registration/**':                 ['permitAll'],
         '/patientHome/**/**':               ['ROLE_PATIENT'],
         '/doctorHome/**/**':                ['ROLE_DOCTOR']
 ]
