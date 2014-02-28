@@ -1,7 +1,7 @@
 package com.ohh.security
 
-class Role {
-
+class Role implements Serializable {
+    private static final long serialVersionUID = 1L
 	String authority
 
 	static mapping = {
