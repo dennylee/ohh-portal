@@ -40,6 +40,7 @@ class RegistrationService {
             u.save(flush: true, validate: true)
             UserRole.create(u, Role.findByAuthority(role))
         } catch (Exception e) {
+            log.error("Failed to register: ${e.getMessage()}")
             throw new RegistrationException("Failed to register '${user.username}'", e);
         }
 

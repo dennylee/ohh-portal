@@ -67,7 +67,13 @@ class RegistrationUserCommand {
     }
 
     public User getUser() {
-        return new User(firstname: firstname, lastname: lastname, username: username, password: password)
+        def user = new User()
+        user.firstname = firstname
+        user.lastname = lastname
+        user.username = username
+        user.password = password
+        return user
+//        return new User(firstname: firstname, lastname: lastname, username: username, password: password)
     }
 }
 

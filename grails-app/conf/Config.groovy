@@ -103,7 +103,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/css/**':                       ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	    '/**/images/**':                    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	    '/**/favicon.ico':                  ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/registration/**':                 ['permitAll'],
+        '/registration/**/**':              ['permitAll'],
         '/patientHome/**/**':               ['ROLE_PATIENT'],
         '/doctorHome/**/**':                ['ROLE_DOCTOR']
 ]

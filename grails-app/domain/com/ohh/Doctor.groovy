@@ -24,7 +24,7 @@ class Doctor extends User {
     static constraints = {
         phoneNumber(blank: true, nullable: true, matches: "[0-9]+", minSize: 10, maxSize: 10)
         email(blank: true, nullable: true, maxSize: 100)
-        gender(blank: false, nullable: true, inList: ['Female', 'Male'])
+        gender(blank: false, nullable: true, inList: ["Female", "Male"])
         dob(blank: false, nullable: true)
         firstname(blank: false, nullable: true, maxSize: 50)
         middlename(blank: true, nullable: true, maxSize: 50)

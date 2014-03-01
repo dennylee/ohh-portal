@@ -1,7 +1,4 @@
-import com.ohh.Doctor
-import com.ohh.Patient
 import com.ohh.security.Role
-import com.ohh.security.UserRole
 
 class BootStrap {
 
