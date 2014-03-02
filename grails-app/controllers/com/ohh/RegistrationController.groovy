@@ -60,7 +60,7 @@ class RegistrationUserCommand {
         confirmUsername(blank: false, validator: { val, obj ->
             return val?.equals(obj.username)
         })
-        username(blank: false, validator: { val, obj ->
+        username(email: true, blank: false, validator: { val, obj ->
             return User.findByUsername(val) == null
         })
         type(blank: false, inList: ['p', 'd'])  // p = patient, d = doctor
@@ -73,7 +73,6 @@ class RegistrationUserCommand {
         user.username = username
         user.password = password
         return user
-//        return new User(firstname: firstname, lastname: lastname, username: username, password: password)
     }
 }
 

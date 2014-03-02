@@ -28,7 +28,7 @@ class Patient extends User {
 
     static constraints = {
         phoneNumber(blank: true, nullable: true, matches: "[0-9]+", minSize: 10, maxSize: 10)
-        email(blank: true, nullable: true, maxSize: 100)
+        email(blank: true, nullable: true, maxSize: 100, email: true)
         gender(blank: true, nullable: true, inList: ["Female", "Male"])
         dob(blank: true, nullable: true)
         martialStatus(blank: true, nullable: true, inList: ["Mrs", "Ms", "Miss", "Mr"])
