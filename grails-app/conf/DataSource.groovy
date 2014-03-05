@@ -1,12 +1,13 @@
 dataSource {
     pooled = true
-//    driverClassName = "org.h2.Driver"
+    driverClassName = "org.h2.Driver"
     username = "root"
     password = ""
 
-    pooled = true
-    driverClassName = "com.mysql.jdbc.Driver"
-    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
+    localhost {
+        driverClassName = "com.mysql.jdbc.Driver"
+        dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
+    }
 
 }
 hibernate {
@@ -18,13 +19,12 @@ hibernate {
 environments {
     localhost {
         dataSource {
-            dbCreate = "update" // one of 'create', 'create-drop','update'
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://127.0.0.1/ohh?useUnicode=yes&characterEncoding=UTF-8"
             username = "root"
             password = ""
 
         }
-
     }
     development {
         dataSource {
