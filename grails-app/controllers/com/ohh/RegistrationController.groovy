@@ -34,7 +34,7 @@ class RegistrationController {
                 springSecurityService.reauthenticate(user.username, user.password)
 
                 // redirect home page
-                forward(controller: 'homeRedirect', action: 'index', params: [uType: uType])
+                redirect(controller: 'home', action: 'index')
             }
         } catch (RegistrationException re) {
             registrationUserCommand.errors.reject(null, re.getMessage())

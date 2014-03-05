@@ -104,13 +104,5 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	    '/**/images/**':                    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	    '/**/favicon.ico':                  ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/registration/**/**':              ['permitAll'],
-        '/patientHome/**/**':               ['ROLE_PATIENT'],
-        '/doctorHome/**/**':                ['ROLE_DOCTOR']
+        '/**/**':                           ['IS_AUTHENTICATED_FULLY']
 ]
-
-// used in the OhhAuthenticatedRedirectStrategy to define where to redirect
-home.dispatcher.handler.redirectMap = [
-        'ROLE_PATIENT': 'patientHome/index',
-        'ROLE_DOCTOR':  'doctorHome/index'
-]
-

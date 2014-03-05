@@ -1,8 +1,13 @@
 dataSource {
     pooled = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
+//    driverClassName = "org.h2.Driver"
+    username = "root"
     password = ""
+
+    pooled = true
+    driverClassName = "com.mysql.jdbc.Driver"
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
+
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -11,6 +16,16 @@ hibernate {
 }
 // environment specific settings
 environments {
+    localhost {
+        dataSource {
+            dbCreate = "update" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://127.0.0.1/ohh?useUnicode=yes&characterEncoding=UTF-8"
+            username = "root"
+            password = ""
+
+        }
+
+    }
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
