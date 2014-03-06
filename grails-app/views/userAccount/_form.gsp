@@ -82,7 +82,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: user, field: 'country', 'error')}">
     <label for="country">
-        Height
+        Country
     </label>
     <g:countrySelect name="country" value="${user?.country}" default="can"/>
 </div>
